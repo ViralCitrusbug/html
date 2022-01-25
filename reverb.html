@@ -11,9 +11,14 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <title>Musical Instrument For Sale - New $ Used Music Gear | </title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <style>
     a:hover,b:hover,p:hover {
       color: rgb(235, 167, 79);
+    }
+    .divbr{
+      border-width: 2px;
+      border-color: black;
     }
     
     .bgcolor{
@@ -86,12 +91,21 @@
         <div class="col-4">
           <div class="row">
             <div class="col-6"><a href=""> Brands</a></div>
-            <div class="col-6"><a href=""> News</a></div>
+            <div class="col-6"><a type="button" class="" onclick="mouseOver()" id="popup" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                News
+            </a></div>
+            <!-- <div id="popcontaier">
+              <div id="close-btn">
+                <span id="closebtn">Close</span>
+              </div>
+              <h2>Heading</h2>
+              <p>Content</p>
+            </div> -->
           </div>
         </div>
         <div class="col-4">
           <div class="row">
-            <div class="col-6"><a href=""> Explore</a></div>
+            <div class="col-6" id="popup2" ondblclick="mouseOver1()" ><a href=""> Explore</a></div>
             <div class="col-6"><a href=""> Shop</a></div>
           </div>
         </div>
@@ -179,11 +193,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div><br><br>
   </div>
-  <div class="">
-
-    <div class="container mt-5">
+  <div class="bg-secondary bg-opacity-25">
+<br><br>
+    <div class="container  mt-5">
       <div class="container">
         <div class="row">
           <div class="col-3">
@@ -208,7 +222,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div><br><br><br>
   </div>
   <div>
 
@@ -901,15 +915,16 @@
               </div>
           </div>
           <p class="text-light">@2022 Reverb.com LLC<a class="text-secondary bg-opacity-75" href=""> terms & policies</a> <a class="text-secondary bg-opacity-75" href="">Privacy and policy</a> </p>
+          <br><br>
         </div>
   </footer>
       </div>
       
+
     </div>
    
 </footer>
 <!-- Footer -->
-  <br><br><br>
 
   <!-- Optional JavaScript; choose one of the two! -->
 
@@ -923,6 +938,58 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
+  <div class="invisible" hidden id="invisible">
+        <div>
+          <b ondblclick="mouseOut()">Close</b>
+        <div class="row divbr" >
+          <div class="col-6">
+            <img src="guitar.jfif" width="100%" height="100%" alt="">
+          </div>
+          <div class="mt-5 col-6">
+            <div>
+              <p >This is best guitar</p>
+            </div>
+          </div>
+        </div>
+        <div class="row divbr">
+          <div class="col-6">
+            <img src="guitar.jfif" width="100%" height="100%" alt="">
+          </div>
+          <div class="col-6">
+            <div>
+              <p>This is best guitar</p>
+            </div>
+          </div>
+        </div>
+        </div>  
+  </div>
+  <div class="divbr invisible" hidden  id="popupjs">
+    <b onclick="mouseOut1()">close</b><br>
+   <b> <a class="text-danger" href="">The pedal movie</a></b><br>
+   <b> <a class="text-danger" href="">Buying guide</a></b><br>
+   <b> <a class="text-danger" href="">Deals and steals</a></b><br>
+   <b> <a class="text-danger" href="">Price drop</a></b><br>
+   <b> <a class="text-danger" href="">Price guide</a></b><br>
+   <b> <a class="text-danger" href="">Seller hub</a></b><br>
+  </div>
+   <script type="text/javascript">
+     var i  = document.getElementById("invisible").innerHTML
+     var x = document.getElementById('popup').innerHTML
+     var j = document.getElementById("popup2").innerHTML
+     var y = document.getElementById("popupjs").innerHTML
+      function mouseOver() {
+            document.getElementById("popup").innerHTML = i;
+            }
+      function mouseOut(){
+            document.getElementById('popup').innerHTML = x;
+            }
+      function mouseOver1(){
+            document.getElementById('popup2').innerHTML = y;
+      }
+      
+
+   </script>
+   
 </body>
 
 </html>
